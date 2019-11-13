@@ -1,0 +1,78 @@
+%Sección
+\section{Lenguajes de Programación}
+\lhead[\thepage]{\thesection Lenguajes de Programación}
+
+\subsection{Definición}
+Los lenguajes de programación son un sistema de notaciones \cite{louden-josemi20}, son utilizados en la creación de programas que controlan el comportamiento y administración de los recursos de una maquina. Usualmente son descritos con dos componentes: la sintaxis, define como sera estructurada la notación, y la semántica, que define el significado de la notación. 
+
+
+\subsection{ Clasificación de los lenguajes de programación}
+
+Los lenguajes de programación pueden agruparse de acuerdo a diferentes criterios, a continuación de describen de forma breves los mas relevantes:
+
+\begin{itemize}
+\item De acuerdo al nivel de abstracción: grado de cercanía a la forma mas básica de notación que puede ser entendida por la maquina.
+
+  \begin{itemize}
+  \item Lenguaje de Maquina: Utiliza código binario para comunicar las ordenes a la maquina, poseen un nivel de complejidad alto para su comprensión por parte de un humano.
+  \item Bajo Nivel: lenguajes que presentan mayor facilidad para su comprensión y utilización que el lenguaje de maquina, son altamente dependientes de las características de la maquina donde son usados \cite{80}. 
+  \item Nivel Medio: poseen un grado de abstracción mas alto pero siguen poseyendo características de los lenguajes de bajo nivel.\cite{80}
+  \item Alto Nivel: son independientes de la maquina, fácil de comprender para el humano. Para su ejecución pasan por un programa interprete o compilador, que traduce las instrucciones en un lenguaje de bajo nivel.\cite{80}
+  \end{itemize}
+  
+ \item De acuerdo a la implementación o manera de ejecutarse:
+   \begin{itemize}
+   \item Compilados: el programa escrito en estos lenguajes pasa por una fase de traducción o compilado, donde un programa (compilador) se encarga de llevar el lenguaje a código objeto. Luego un programa enlazador se encarga de unir el código objeto generado con las librerías necesarias para producir un programa equivalente al original pero en lenguaje de maquina \cite{81}. 
+   \item Interpretados: las instrucciones de los programas escritos en este tipo de lenguajes son ejecutadas en tiempo real por otro programa conocido como interprete, que traduce las instrucciones en tiempo real para su ejecución por la maquina \cite{81}.
+   \end{itemize}
+   
+\item De acuerdo al paradigma de programación empleado: existen lenguajes que soportan mas de un paradigma. Loa paradigmas mas comunes son:
+
+	\begin{itemize}
+	\item Imperativos: consiste de comandos explícitos y llamadas a procedimiento, llevan acabo operaciones sobre datos y modifican  los valores de las variables del programa, así como un entorno externo.\cite{dimilter}
+    \item Funcionales: se basa en el uso de funciones mutuamente relacionadas. Cada función es una expresión para computar un valor y es definida como una composición de funciones estándar definidas en el lenguaje.\cite{dimilter}
+    \item Lógicos: los lenguajes en este paradigma son diseñados para seguir una estructura de lógica formal, esto es, axiomas(hechos y reglas) que describen propiedades de un objeto especifico, y un teorema a ser probado.\cite{dimilter}
+    \item Orientados a objeto: se describen estructuras y comportamientos de objetos y clases de objetos. Un objeto encapsula variables y funciones, mientras que las clases representan conjunto de objetos que tienen la misma estructura y comportamiento. Maneja conceptos como clases compuestas y herencia.\cite{dimilter}
+	\end{itemize}
+\end{itemize}
+
+\subsection{R}
+
+R es descrito como un lenguaje para estadística computacional. Es un proyecto GNU similar al lenguaje S, puede ser considerado como otra implementación del mismo.\cite{rproject}
+
+El lenguaje provee  una variedad amplia de técnicas estadísticas y gráficas, y es altamente extensible gracias a la capacidad de inclusión de paquetes desarrollados por su comunidad de usuarios, en \cite{24-josemy} se puede apreciar la cantidad de funcionalidades que contiene el entorno R. Otra de las fortalezas del lenguaje se encuentra su facilidad para producir gráficas de alta calidad, incluyendo símbolos matemáticos y formulas donde se necesite.\cite{rproject}
+
+R  esta disponible como \emph{software} libre bajos los términos de la \emph{Free Software Foundation’s GNU General Public License}.Puede ejecutarse en una gran variedad de plataformas UNIX y sistemas similares ( como \emph{FreeBSD}  y \emph{Linux}), \emph{Windows} y \emph{MacOS}.\cite{rproject}
+
+
+La forma de operar de R es a través de objetos que son guardados en la memoria principal del ordenador, sin la necesidad de archivos temporales. Las operaciones de lectura y escritura de archivos se realiza para la obtención de los datos sobre los que se trabajara y el almacenamiento de resultados, la lectura puede hacerse a través de la red gracias a las funcionalidades que trae el lenguaje por defecto. El lenguaje cuenta con un gran conjunto de funciones predefinidas, y paquetes aportados por la comunidad, para su utilización por parte del usuario. Los resultados pueden ser visualizados de forma directa en la pantalla, guardarse en un objeto o escribir directamente en el disco en diferentes formatos. Los objetos resultados pueden ser analizados y modificados según la conveniencia del usuario.\cite{28-josemy}
+
+\subsection{Java}
+
+Lenguaje de propósito general, basado en clases, orientado a objetos. El punto fuerte de este lenguaje es su portabilidad, basado en el principio WORA (\emph{write once, run anywhere}), los programas compilados en Java pueden correr en cualquier sistema independientemente de su hardware y sistema operativo, siempre que este posea la \emph{Java Virtual Machine } (JVM), maquina virtual diseñada específicamente para la ejecución de programas de Java, sin la necesidad de que estos sean compilados nuevamente.\cite{25-josemy}
+
+Su portabilidad y uso en el área de los dispositivos móviles (fuertemente relacionado con el sistema operativo Android) le han brindado a Java una gran popularidad. Otra característica resaltante del lenguaje en su manejo de la memoria, Java hace uso de una implementación propia de un recolector de basura
+automático (\emph{Garbage Collector}), que se encarga de manejar la memoria en el ciclo de vida de un objeto. Java se define como un lenguaje para entornos de producción, no para investigaciones. \cite{25-josemy}
+
+\subsection{Python}
+
+Python es un lenguaje de programación de propósito general, interpretado, interactivo y orientado a objetos. Provee estructuras de datos de alto nivel, tales como listas y diccionarios, escritura dinámica, módulos, clases, excepciones, manejo automático de la memoria, entre otros. Su sintaxis es simple, manteniendo la organización en el código por medio de identación, una de sus cualidades es que reduce la complejidad en la lectura y entendimiento del código, logrado reducir los costos de mantenimiento.\cite{26-josemy,27-josemy}
+
+Diseñado en 1990, por Guido van Rossum. El lenguaje es de licencia libre, incluso para propósitos comerciales, y puede ejecutarse en la gran mayoría de computadores modernos. \cite{26-josemy}
+
+Python es de naturaleza modular. Su kernel puede ser extendido importando distintos módulos, trabaja con un sistema de importación fácil de utilizar por el desarrollador. Incluye una variedad de extensiones que pueden estar escritas en Python, C o C++. Los módulos o extensiones que ofrecen son muy variados y se pueden encontrar para operaciones que van desde manipulación de arreglos de caracteres, expresiones regulares, hasta Interfaces de Usuario Gráficas (GUI), utilidades para el desarrollo web, servicios del sistema operativo, paquetes para minería de datos y machine learning, entre muchos otros. \cite{26-josemy}
+
+\subsection{Scala}
+
+Scala es un lenguaje de programación  que guarda similitud con Java, unifica la programación orientada a objetos y la funcional\cite{scala}. Sacala es un acronimo para "lenguaje escalable " (\emph{Scalable Language}). El código generado esta a la par con el de Java y su precisión en el tipeo se traduce en la captura de problemas en tiempo de compilación y no después del despliegue \cite{scala2}.
+
+Es puramente orientado a objetos en el sentido que cada valor es un objeto. Tipos y comportamiento de objetos son descritos por clases. Las clases pueden estar compuesta usando composiciones mixtas.\cite{scala}
+
+Es un lenguaje funcional en el sentido de que cada función es un valor.  Anidamiento de definición de funciones y funciones de orden superior están definidas por naturaleza. Soporta una noción general de coincidencia de patrones (\emph{pattern matching}) lo cual puede modelar los tipos algebraicos usados en muchos lenguajes funcionales.\cite{scala} 
+
+
+
+
+
+
+

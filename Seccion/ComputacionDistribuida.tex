@@ -1,0 +1,75 @@
+%Sección
+\section{Computación Distribuida}
+\lhead[\thepage]{\thesection Computación Distribuida}
+
+
+\subsection{Definición}
+
+Modelo de computación caracterizado por la intervención de un grupo de sistemas independientes que bien pueden estar separados de forma física o no, sin embargo, se encuentran conectados entre sí por una red de comunicaciones, que tiene como propósito dividir una tarea en partes pequeñas que se unen para obtener un resultado final. Este tipo de sistemas, suelen estar conformados por computadores que tienen un hardware y un software independiente, a pesar de que son percibidos por el usuario como un solo sistema, del cual se puede acceder a cuyos recursos como se accede a los propios; además, este modelo también se caracteriza por su disponibilidad, puesto que en caso de que un nodo de la red falle, los servicios que correspondían a este se distribuyen en los nodos restantes \cite{47dd}.
+
+Gracias a estos sistemas, se hace posible que instituciones de pocos recursos puedan tener acceso remoto a sus recursos computacionales, así como también que empresas pequeñas unan sus recursos para obtener uno de más fortaleza.
+
+
+\subsection{El Teorema CAP}
+
+El teorema CAP fue enunciado por Eric Brewer inicialmente como una conjetura en el año 2000 y probado formalmente en el 2002 por Seth Gilbert y Nancy Lynch en \cite{brewer}. 
+En dicha conjetura Brewer afirmo que existen tres requerimientos sistemáticos esenciales relacionados de forma especial cuando se trata el diseño e implementación de aplicaciones en un entorno distribuido, dichos requerimientos son Consistencia, Disponibilidad y Tolerancia a partición, dándole el nombre CAP por sus siglas en ingles (\emph{Consistency, Availability, Partition Tolerance}).\cite{capt}
+
+\begin{itemize}
+\item Consistencia:  Un servicio es consistente si opera de forma completa o no lo hace en absoluto. Gilbert y Lynch usan la palabara atómico, en ves de consistente para evitar confusiones con la definición de consistencia en el principio ACID de sistemas de bases de datos.\cite{capt}
+
+\item Disponibilidad: Existe disponibilidad cuando se puede acceder al servicio.\cite{capt}
+
+\item Tolerancia a partición: ningún error que no sea la falla total de la red, tiene permitido causar que el sistema responda de forma incorrecta.\cite{capt}
+
+\end{itemize}
+	El teorema indica que garantizar dos de los requerimiento antes mencionados deriva en la deficiencia de el tercero.\cite{capt}
+
+
+\subsection{Cluster}
+
+Conjunto de nodos interconectados con dispositivos de alta velocidad, actúan en conjunto empleando el poder de cómputo de varios CPU para lograr la realización de tareas que requieran un alto rendimiento. La importancia de los cluster radica en que aumentan la disponibilidad, la fiabilidad y la escalabilidad de la red dentro del entorno distribuido. En efecto, los llamados super computadores están compuestos por un cluster que une varios computadores.\cite{46dd}
+
+\subsection{Escalabilidad}
+
+Constituye una propiedad de un sistema determinada por su habilidad de aumentar su capacidad de trabajo, logrando reaccionar y adaptarse a nuevas demandas sin perder la calidad y la fluidez de los servicios que ofrece. El aumento de dicha capacidad puede ser reflejado en el número de usuarios, cantidad de datos procesados o solicitudes recibidas. Se pueden describir dos tipos de escalabilidad: La horizontal y la vertical.\cite{48dd}
+
+\subsubsection{Horizontal}
+
+El rendimiento del sistema mejora cuando se añaden más nodos a este, implica un aumento en la capacidad, más no necesariamente en la potencia. El efecto de este tipo de escalabilidad viene dado por la posibilidad de distribuir la carga de procesamiento entre varios servidores, de esta forma, la escalabilidad permanece disponible para el usuario aunque alguno de los servidores falle. A diferencia de la escalabilidad vertical, no se ve limitada por el hardware, pues cada servidor añadido proporciona una mejora casi lineal. \cite{49dd}
+
+\subsubsection{Vertical}
+
+El sistema mejora en conjunto al añadir más recursos a un nodo en particular, su objetivo es hallar un mejor software, más rápido y más costoso. Se ve limitada por la capacidad del hardware, puesto que requiere agregar más memoria o procesadores más eficientes, lo cual implica en ocasiones migrar a un equipo de mayor potencia.\cite{49dd}
+
+\subsection{Grid/Malla}
+
+Es una tecnología que permite la utilización coordinada y concurrente de recursos heterogéneos, autónomos y distribuidos que no están sujetos a un control centralizado, por lo cual, pueden pertenecer a distintas organizaciones y encontrarse interconectados (Como sucede con el internet), permitiendo a estas mantener sus políticas de seguridad y gestión de recursos, por tanto, la tecnología empleada en la construcción de un Grid es complementaria a otras tecnologías.\cite{50dd}
+
+Entre los principales objetivos de un grid se hallan la optimización e integración del uso de recursos distribuidos de cálculo intensivo y de grandes bases de datos, a través de middleware, emulando así la función de un cluster.\cite{50dd}
+
+Una de las ventajas de la tecnología Grid es la facilidad que posee en cuanto a términos de escalabilidad, puesto que ello le permite crecer según las necesidades de la organización, es por ello que fueron concebidos como la creación de una red mundial de laboratorios proveedores de poder de cómputo y capacidad de almacenamiento. Un ejemplo actual de este concepto se halla en el big data, a través de los smart grids y su relación con el internet de las cosas.\cite{50dd}
+
+\subsection{Base de datos distribuida}
+
+Es un conjunto de múltiples bases de datos relacionadas lógicamente y distribuidas entre diferentes sitios que se interconectan a través de una red de comunicaciones. Estas bases de datos cuentan con la capacidad de realizar procesamiento autónomo, por lo cual puede realizar operaciones localizadas o distribuidas.\cite{51dd}
+
+
+\subsubsection{Sistema manejador de base de datos distribuidas}
+
+Se refiere al software que permite la gestión de una base de datos distribuida, proporcionando un mecanismo de acceso que hace que la distribución sea transparente para el usuario, es decir, este tendrá una visión de la aplicación como si se ejecutara en una sola máquina.\cite{51dd}
+
+\subsubsection{Sistema de base de datos distribuida}
+
+Sistema constituido por múltiples sitios de bases de datos distribuidas que se interconectan a través de un sistema de comunicaciones, puede ser definido también como el resultado de la integración entre una base de datos distribuida y el sistema de manejo correspondiente.\cite{51dd}
+
+\subsubsection{Distribución de los datos}
+
+Hace referencia al esquema de almacenamiento de datos empleado y el posicionamiento de estos en el sistema. Puede identificarse con cuatro tipos descritos a continuación:
+\begin{itemize}
+\item Centralizada: La base de datos se encuentra centralizada en un lugar, mientras que el procesamiento de datos y los usuarios se encuentran distribuidos.\cite{51dd}
+\item Particionamiento o Fragmentación: Se refiere a la partición de la información para distribuir los fragmentos a diferentes sitios de la red, por tanto, cada nodo debe contener uno  o más fragmentos disjuntos de la base de datos. El objetivo final es hallar un nivel de fragmentación adecuado. Puede darse a su vez de 3 maneras: Horizontal (Se particiona una relación sobre sus tuplas o registros, cada fragmento representa un subconjunto de tuplas de la relación global), Vertical (Se particiona una relación en base a sus atributos, la clave primaria de la relación se incluye en cada fragmento)  y Mixta o Híbrida (Se aplica la fragmentación vertical seguida de la horizontal o viceversa).\cite{51dd}
+\item Replicación: La información almacenada en un nodo puede o  no estar replicada en otro, otorga a la base de datos cierta tolerancia a las fallas, puesto que en caso de que algún nodo falle, la información requerida se puede hallar en otro, evitando que el funcionamiento del sistema sea centralizado. Las replicaciones pueden ser parcial (Cada fragmento está replicado en algún sitio) o total (Cada nodo alberga toda la información). Esta modalidad es útil cuando el número de consultas de solo lectura supera al de solo escritura.\cite{51dd}
+
+\item Híbrida: Combina los esquemas de replicación y partición, se particiona una relación y a su vez, los fragmentos obtenidos se replican selectivamente.\cite{51dd}
+\end{itemize} 

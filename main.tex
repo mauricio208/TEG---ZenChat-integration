@@ -1,0 +1,96 @@
+no%--------------------------------------------------------------
+%	ARCHIVO PRINCIPAL
+%--------------------------------------------------------------
+
+%	Tipo de documento
+\documentclass[12pt]{report}
+\setcounter{secnumdepth}{2}
+%	Lista de paquetes a utilizar
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage[fixlanguage]{babelbib}
+\selectbiblanguage{spanish}
+\usepackage{url}
+\usepackage{tocloft}
+\usepackage[right=3cm,left=3cm,top=2cm,bottom=2cm,headsep=0.5cm,footskip=0.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{emptypage}
+%\usepackage[numbers]{natbib}
+\usepackage{cite}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{flafter}
+\usepackage{float}
+%	Ubicación de las imágenes 
+\graphicspath{ {Figuras/} }
+
+
+\usepackage{caption}
+\newcommand{\source}[1]{\vspace{-3pt} \caption*{\emph{\centering{ Fuente: {#1}}}} }
+
+
+% 	Aquí definimos el encabezado de las paginas 
+\lhead[L]{}
+\chead[]{}
+\rhead[]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+
+
+% % 	Aquí definimos el pie de pagina de las paginas
+% \lfoot[]{}
+% \cfoot[]{}
+% \rfoot[]{Titulo del documento}
+% \renewcommand{\footrulewidth}{0.5pt}
+
+% 	Aquí definimos el encabezado y pie de pagina de la pagina inicial de un capitulo.
+\fancypagestyle{plain}{
+%	Encabezado
+\fancyhead[L]{\rightmark}
+\fancyhead[C]{}
+\fancyhead[R]{\thepage}
+%	Pie de pagina
+% \fancyfoot[L]{}
+% \fancyfoot[C]{}
+% \fancyfoot[R]{Titulo del documento}
+\renewcommand{\headrulewidth}{0.5pt}
+% \renewcommand{\footrulewidth}{0.5pt}
+}
+\setlength{\headheight}{16pt}
+
+%	Estilo de las paginas (Activa encabezados y pie de pagina)
+\pagestyle{fancy}
+
+
+%	Tipo de referencias
+\bibliographystyle{babplain}
+
+%	Titulo del documento
+\title{Plantilla de documentos universitarios}
+%	Autor del documento
+\author{Mauricio Andres Machuca Pavan}
+
+%***************** Estructura del documento *****************
+\setlength{\parskip}{1em}
+\begin{document}
+
+%	Portada
+\include{Capitulos/Portada2}
+\pagenumbering{Roman} 
+\chapter*{Introducción}
+\addcontentsline{toc}{chapter}{Introducción}
+
+
+%	Indice / Tabla de Contenidos
+\include{Capitulos/Indices}
+\pagenumbering{arabic} 
+
+%	Capitulo uno
+\include{Capitulos/1}
+\include{Capitulos/4}
+% \include{Capitulos/MarcoTeorico}
+
+% \include{Capitulos/MarcoMetodologico}
+
+%	Referencias bibliográfica
+\bibliography{Referencias/Referencias}
+\end{document}
